@@ -6,7 +6,7 @@ Specializing in building spatial computing services, designing routing engines, 
 
 ---
 
-## 🛠️ Tech Stack & Expertise
+## Tech Stack & Expertise
 
 - **Languages:** Go, TypeScript/Node.js, Python, SQL
 - **Spatial / Databases:** PostgreSQL (PostGIS), Redis, OSRM, Spatial Indexing (R-Tree/GiST), QGIS
@@ -14,7 +14,7 @@ Specializing in building spatial computing services, designing routing engines, 
 
 ---
 
-## 🚀 Key Projects & Engineering Work
+## Key Projects & Engineering Work
 
 ### 1. Intelligent LLM Intent & Difficulty Router
 An orchestrator layer that intercepts incoming user queries and routes them dynamically based on Intent (12 tasks, 32 sub-tasks) and Difficulty.
@@ -42,4 +42,4 @@ Designed and optimized a self-hosted routing engine and spatial queries handling
 
 - **Website/Blog:** [andi.is-a.dev](https://andi.is-a.dev)
 - **LinkedIn:** [linkedin.com/in/andimuchlas](https://www.linkedin.com/in/andimuchlas)
-- **Email:** [hello@andi.is-a.dev](mailto:hello@andi.is-a.dev)
+- **Email:** [andimuchlas156@gmail.com](mailto:andimuchlas156@gmail.com)
