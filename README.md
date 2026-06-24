@@ -33,7 +33,7 @@ Designed and optimized a self-hosted routing engine and spatial queries handling
 - **Go Memory & GC Optimization:**
   - Optimized OSRM payload parsing in Go, replacing heap-allocated pointers with value-types and utilizing `sync.Pool` to reuse JSON decoders and coordinate slices, heavily reducing Garbage Collection (GC) latency.
 - **Database & Query Performance (PostGIS):**
-  - Tuned PostgreSQL runtime parameters (`work_mem = '64MB'`, `jit = off`) to speed up autocomplete search sorting operations and avoid disk spills.
+  - Tuned PostgreSQL runtime parameters (`work_mem = '8MB'`, `jit = off`) to speed up autocomplete search sorting operations and avoid disk spills.
   - Implemented a geographic partitioning query strategy using spatial bounding box constraints (`ST_Expand` bounding boxes via GIST index) to resolve search results within local clusters first before falling back to a global search.
 
 ---
