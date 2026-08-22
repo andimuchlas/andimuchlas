@@ -60,11 +60,9 @@ An orchestrator layer that intercepts incoming user queries and routes them dyna
   - **Soft Scoring Evaluation:** Dynamic model selection using weighted scores of Cost (35%), Task Affinity (30%), Difficulty Headroom (20%), and Execution Mode Fit (15%).
   - Built an **Interactive Interpretability Visualizer Suite** featuring token-level Saliency Maps and a 3D Vector Space PCA visualizer (`Plotly.js`) to debug `[CLS]` token clusters.
 
-### 2. High-Performance Map Engine & Spatial Services
-
-Designed and optimized a self-hosted routing engine and spatial queries handling millions of requests.
-
-- **Routing Infrastructure (OSRM):**
+### 2. RAJADEREK — High-Performance Logistics & Spatial Routing Engine
+Microservice & Gateway architecture designed for real-time vehicle towing dispatch and spatial routing handling millions of requests.
+- **Routing Infrastructure & Dynamic Weights (OSRM):**
   - Configured and leveraged **Multi-Level Dijkstra (MLD)** instead of Contraction Hierarchies (CH) to support dynamic parameters (like toll road exclusion) without slow graph rebuilds.
   - Implemented client-side HTTP connection pooling and caching (Redis with spatial hashing) to minimize network handshake overhead.
 - **Go Memory & GC Optimization:**
@@ -72,6 +70,20 @@ Designed and optimized a self-hosted routing engine and spatial queries handling
 - **Database & Query Performance (PostGIS):**
   - Tuned PostgreSQL runtime parameters (`work_mem = '8MB'`, `jit = off`) to speed up autocomplete search sorting operations and avoid disk spills.
   - Implemented a geographic partitioning query strategy using spatial bounding box constraints (`ST_Expand` bounding boxes via GIST index) to resolve search results within local clusters first before falling back to a global search.
+- **Microservices & Real-time Messaging:** Built gRPC communication between the TypeScript Gateway and Go Core Engine, with NATS messaging for low-latency event distribution.
+- **Tech Stack:** `Go`, `TypeScript`, `OSRM`, `PostgreSQL/PostGIS`, `gRPC`, `Redis`, `NATS`, `Docker`, `Kubernetes`.
+
+### 3. ENTERPRISE GENSET MANAGEMENT — Clean Architecture & Distributed Pipeline
+Enterprise equipment rental and field maintenance logistics platform built with Clean/Hexagonal Architecture in an NX Monorepo.
+- Integrated BullMQ & Redis distributed job queues for async push alerts (FCM), digital BAST generation with e-signatures, and XLSX financial exports.
+- Implemented Dependency Injection (`tsyringe`), end-to-end validation with shared Zod schemas, and Better-Auth RBAC.
+- **Tech Stack:** `Node.js`, `TypeScript`, `Hono.js`, `Drizzle ORM`, `PostgreSQL`, `Redis`, `BullMQ`, `AWS S3`, `NX`.
+
+### 4. CASANELA VILLA API — Reservation Engine & Real-time OTA Channel Sync
+High-throughput backend service for villa reservations, dynamic pricing, and external OTA calendar synchronization.
+- Decoupled background processing using BullMQ & Redis for automated OTA sync (HotelMu), reservation expiration timeouts, and email delivery.
+- Built secure S3 Presigned URL media storage and automated PDF quotation/invoice generation (`jsPDF`).
+- **Tech Stack:** `Bun`, `TypeScript`, `Hono.js`, `PostgreSQL`, `Drizzle ORM`, `Redis`, `BullMQ`, `AWS S3 / MinIO`, `Docker`.
 
 ---
 
