@@ -15,23 +15,23 @@ Specializing in building spatial computing services, designing routing engines, 
 
 ---
 
-## Certifications & Credentials
+## 📜 Certifications & Credentials
 
 <p align="left">
   <a href="https://www.credly.com/badges/55f7f23f-acc6-40f1-a0cd-a3cb70e5db8e/public_url" target="_blank" title="AWS Certified Cloud Practitioner">
-    <img src="https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/linkedin_thumb_image.png" width="95" height="95" alt="AWS Certified Cloud Practitioner" />
+    <img src="https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" width="110" alt="AWS Certified Cloud Practitioner" />
   </a>
-   
+  &nbsp;&nbsp;
   <a href="https://www.credly.com/badges/210e19f0-0fb8-4055-b241-20978744c489/public_url" target="_blank" title="AWS re/Start Graduate">
-    <img src="https://images.credly.com/images/44e2c252-5d19-4574-9646-005f7225bf53/linkedin_thumb_image.png" width="95" height="95" alt="AWS re/Start Graduate" />
+    <img src="https://images.credly.com/images/44e2c252-5d19-4574-9646-005f7225bf53/image.png" width="110" alt="AWS re/Start Graduate" />
   </a>
-   
+  &nbsp;&nbsp;
   <a href="https://www.credly.com/badges/670ec7bf-3fdc-4e4c-bd24-0aa304ffadf2" target="_blank" title="Deploy Kubernetes Applications on Google Cloud">
-    <img src="https://images.credly.com/images/f0388a0c-130f-47cd-8750-d6357e907e58/linkedin_thumb_image.png" width="95" height="95" alt="Deploy Kubernetes Applications on Google Cloud" />
+    <img src="https://images.credly.com/images/f0388a0c-130f-47cd-8750-d6357e907e58/image.png" width="110" alt="Deploy Kubernetes Applications on Google Cloud" />
   </a>
-   
+  &nbsp;&nbsp;
   <a href="https://www.credly.com/badges/f94769f0-1891-429e-93e4-8d156ccca072" target="_blank" title="Unity Certified Associate: Game Developer">
-    <img src="https://images.credly.com/images/99becefb-f627-413c-8ad3-b52534e50037/linkedin_thumb_image.png" width="95" height="95" alt="Unity Certified Associate: Game Developer" />
+    <img src="https://images.credly.com/images/99becefb-f627-413c-8ad3-b52534e50037/image.png" width="110" alt="Unity Certified Associate: Game Developer" />
   </a>
 </p>
 
@@ -39,9 +39,9 @@ Specializing in building spatial computing services, designing routing engines, 
   <summary><b>View all Google Cloud Skills & Machine Learning Badges</b></summary>
   <br/>
 
-- 🌐 **Google Cloud Profile:** [skills.google/public_profiles/andimuchlas](https://www.skills.google/public_profiles/104038eb-cdaa-4a54-8bf4-4d575ae2c783)
-- 🛠️ **Skill Badges:** Terraform Essentials, Core Infrastructure & Security, Modern App Deployment, Advanced App Ops
-- 🤖 **ML & AI:** [Fundamentals of Machine Learning &amp; AI](https://drive.google.com/file/d/1U2bKCxNZ11TE13CRJmRKNh6Ucdm7KFJE/preview), [Machine Learning Terminology and Process](https://drive.google.com/file/d/1u5fq3eVU0_nh5FONoHzm6Cr_Tw2IhzT6/preview), Sentiment & Cloud Vision APIs
+- **Google Cloud Profile:** [skills.google/public_profiles/andimuchlas](https://www.skills.google/public_profiles/104038eb-cdaa-4a54-8bf4-4d575ae2c783)
+- **Skill Badges:** Terraform Essentials, Core Infrastructure & Security, Modern App Deployment, Advanced App Ops
+- **ML & AI:** [Fundamentals of Machine Learning &amp; AI](https://drive.google.com/file/d/1U2bKCxNZ11TE13CRJmRKNh6Ucdm7KFJE/preview), [Machine Learning Terminology and Process](https://drive.google.com/file/d/1u5fq3eVU0_nh5FONoHzm6Cr_Tw2IhzT6/preview), Sentiment & Cloud Vision APIs
 
 </details>
 
