@@ -33,14 +33,15 @@ Designing routing engines, geospatial ETL pipelines, and low-latency microservic
 > *Core systems below are private production code. Summaries highlight system architecture, engineering decisions, and technical impact.*
 
 ### 1. RAJADEREK — Real-Time Spatial Routing & Logistics
-**Role:** Lead Backend & Spatial Engineer &nbsp;|&nbsp; `Private / Production System`  
+**Role:** Backend & Spatial Engineer &nbsp;|&nbsp; `Private / Production System`  
 Real-time dispatching and routing platform managing on-demand vehicle towing operations.
 
 - **Service Decomposition:** Decoupled into a TypeScript Gateway (auth & aggregation) and a standalone Go Core Engine via **gRPC** to isolate heavy graph computations from business logic.
-- **Data Ingestion & Spatial Search (~1.5M Records):** Built automated **Scrapy ETL pipelines** aggregating ~1.5M POIs and ~70K boundaries (Overture Maps, Overpass/OSM, BIG, Pertamina). Optimized fuzzy autocomplete with bounded PostGIS query strategies (`ST_Expand` + GiST index).
+- **Data Ingestion (~2.8M Records):** Built automated **Scrapy ETL pipelines** scaling POI datasets from ~1.5M to ~2.8M records and ~70K administrative boundaries (Overture Maps, Overpass/OSM, BIG, Pertamina).
+- **Low-Latency Search & Autocomplete (Typesense):** Migrated bottlenecked spatial SQL queries (which degraded from ~1s to 3–5s as data doubled) to **Typesense**, slashing latency to **<200ms** (p95) using tiered multi-search queries (45 km geofenced local priority, typo tolerance), protected by a Go-native circuit breaker with PostGIS GiST fallback.
 - **Proximity Indexing (Uber H3):** Replaced slow polygon intersection queries with **Uber H3 hexagonal indexing** ($O(1)$ cell lookup) for instant driver-to-job proximity matching.
-- **Dynamic Routing & GC Tuning:** Configured OSRM with **Multi-Level Dijkstra (MLD)** for dynamic toll-road weighting; reused Go JSON decoders and slice buffers via `sync.Pool` to minimize GC latency spikes.
-- **Stack:** `Go` · `TypeScript` · `Python (Scrapy)` · `OSRM` · `Uber H3` · `PostgreSQL/PostGIS` · `gRPC` · `Redis` · `NATS` · `Kubernetes`
+- **Dynamic Routing & GC Tuning:** Configured OSRM with **Multi-Level Dijkstra (MLD)** for dynamic toll-road weighting; reused memory buffers to minimize Go GC pressure under high dispatch throughput.
+- **Stack:** `Go` · `TypeScript` · `Python (Scrapy)` · `Typesense` · `OSRM` · `Uber H3` · `PostgreSQL/PostGIS` · `gRPC` · `Redis` · `NATS` · `Kubernetes`
 
 ### 2. Enterprise Genset Management — Clean Architecture & Distributed Pipeline
 **Role:** Backend Engineer &nbsp;|&nbsp; `Private / Production System`  
