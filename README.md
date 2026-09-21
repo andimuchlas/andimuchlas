@@ -43,7 +43,16 @@ Real-time dispatching and routing platform managing on-demand vehicle towing ope
 - **Dynamic Routing & GC Tuning:** Configured OSRM with **Multi-Level Dijkstra (MLD)** for dynamic toll-road weighting; reused memory buffers to minimize Go GC pressure under high dispatch throughput.
 - **Stack:** `Go` · `TypeScript` · `Python (Scrapy)` · `Typesense` · `OSRM` · `Uber H3` · `PostgreSQL/PostGIS` · `gRPC` · `Redis` · `NATS` · `Kubernetes`
 
-### 2. Enterprise Genset Management — Clean Architecture & Distributed Pipeline
+### 2. AI Avatar Unity — End-to-End AI & Real-Time Interactive System
+**Role:** Unity & AI Systems Engineer &nbsp;|&nbsp; `Interactive System`  
+Real-time AI avatar application combining a Unity client with a containerized voice-processing backend.
+
+- **Voice Pipeline:** Implemented a voice pipeline connecting speech recognition, LLM inference, and speech synthesis for real-time conversational interaction.
+- **Avatar & Lip-Sync Animation:** Integrated MetaPerson avatar and Oculus LipSync to translate generated audio into real-time facial and lip-sync animation.
+- **Real-Time Communication:** Connected Unity to backend AI services through WebSocket-based real-time communication.
+- **Stack:** `Unity` · `C#` · `WebSocket` · `Docker` · `STT` · `LLM` · `TTS` · `Oculus LipSync` · `MetaPerson`
+
+### 3. Genset Management — Clean Architecture & Distributed Pipeline
 **Role:** Backend Engineer &nbsp;|&nbsp; `Private / Production System`  
 Equipment rental and field maintenance logistics platform across field crews and administration.
 
@@ -51,7 +60,7 @@ Equipment rental and field maintenance logistics platform across field crews and
 - **Asynchronous Job Pipeline:** Decoupled PDF BAST generation (digital e-signatures), FCM push alerts, and XLSX financial exports using **BullMQ & Redis**.
 - **Stack:** `Node.js` · `TypeScript` · `Hono.js` · `Drizzle ORM` · `PostgreSQL` · `Redis` · `BullMQ` · `AWS S3` · `NX`
 
-### 3. Casanela Villa API — High-Throughput Reservation Engine
+### 4. Casanela Villa — High-Throughput Reservation Engine
 **Role:** Backend Engineer &nbsp;|&nbsp; `Private / Production System`  
 Fast booking engine with dynamic pricing calculations and real-time OTA calendar synchronization.
 
@@ -60,7 +69,7 @@ Fast booking engine with dynamic pricing calculations and real-time OTA calendar
 - **Direct S3 Uploads:** Integrated S3 Presigned URL workflows for direct media storage, bypassing backend proxy bottlenecks.
 - **Stack:** `Bun` · `TypeScript` · `Hono.js` · `PostgreSQL` · `Drizzle ORM` · `Redis` · `BullMQ` · `AWS S3`
 
-### 4. Intelligent LLM Intent & Difficulty Router
+### 5. Intelligent LLM Intent & Difficulty Router
 **Role:** ML Systems & Backend Architecture &nbsp;|&nbsp; `Private Research`  
 Orchestration layer intercepting user queries and dynamically routing them across model tiers.
 
