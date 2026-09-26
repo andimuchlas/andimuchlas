@@ -40,7 +40,7 @@ Experienced across modern frontend (TypeScript, React, Next.js, Three.js, Leafle
 | **Databases & Spatial** | PostgreSQL, PostGIS, Spatial SQL, Uber H3 Grid, OSRM, Redis, Typesense, Drizzle ORM |
 | **Real-Time & Interactive** | Unity (C#), LiDAR Sensor Telemetry, WebSocket Streaming, Oculus LipSync |
 | **Cloud & DevOps** | Docker, Kubernetes, AWS (S3, IAM), Vercel, CI/CD, Linux |
-| **Testing & Methods** | Vitest, Automated Unit Testing, Client-Side Math Engines, SEO (JSON-LD) |
+| **Testing & Methods** | Vitest, Automated Unit Testing, TDD, SEO (JSON-LD), REST & gRPC API Design |
 | **Spoken Languages** | Indonesian (Native), English (Professional Working Proficiency) |
 
 ---
@@ -50,7 +50,7 @@ Experienced across modern frontend (TypeScript, React, Next.js, Three.js, Leafle
 - **PT Lintas Cakra Cipta** — `Software Engineer (Backend & Web Systems)` &nbsp;|&nbsp; *Sep 2025 – Present · Full-time (Bandung)*  
   Engineered high-performance backend services in Go/TypeScript, optimized PostGIS spatial queries sustaining sub-second SLAs, and integrated client-side interactive mapping web applications.
 - **Molca Teknologi Nusantara** — `Interactive Software Engineer` &nbsp;|&nbsp; *Jun 2026 – Present · Remote Contract*  
-  Developed interactive simulation systems and modular client-side features in C# (Unity), optimizing runtime memory and frame rendering loops.
+  Developed interactive simulation systems and modular gameplay features in C# (Unity) with decoupled component architecture, optimizing runtime memory and frame rendering loops.
 - **Automata Visual** — `Software Engineer (IoT & Interactive Systems)` &nbsp;|&nbsp; *Sep 2024 – Feb 2025 · Project Contract (Cimahi)*  
   Engineered an IoT interactive display at the Disaster Room of Geological Museum Bandung, transforming raw hardware LiDAR telemetry into real-time touch detection in C#.
 - **UVISUAL Studio** — `Software Engineer (Web & Interactive Systems)` &nbsp;|&nbsp; *Aug 2023 – Sep 2024 · Freelance (Cimahi)*  
@@ -66,10 +66,10 @@ Real-time dispatching and routing platform managing on-demand vehicle towing and
 
 - **Spatial Search & Leaflet Mapping:** Built interactive operator map interfaces using **Leaflet** for real-time dispatch and route inspection, supported by spatial search across ~2.8M POIs and ~70K boundaries via PostGIS, H3, and Typesense.
 - **Automated Ingestion ETL (~2.8M Records):** Built automated **Scrapy ETL pipelines** scaling POI datasets from ~1.5M to ~2.8M records and ~70K administrative boundaries (Overture Maps, Overpass/OSM, BIG, Pertamina).
-- **High-Throughput Core Decomposition:** Decoupled into a TypeScript Gateway (auth & aggregation) and a standalone Go Core Engine via **gRPC (Protobuf)** to isolate heavy graph computations from business logic.
+- **Decoupled Gateway & Routing Core:** Decoupled into a TypeScript Gateway (auth & aggregation) and a standalone Go Core Engine via **gRPC (Protobuf)** to isolate heavy graph computations from business logic.
 - **Low-Latency Search & Autocomplete (Typesense):** Migrated bottlenecked spatial SQL queries to **Typesense**, slashing latency to **<200ms** (p95) using tiered multi-search queries (45 km geofenced local priority, typo tolerance), protected by a Go-native circuit breaker with PostGIS GiST fallback.
-- **Proximity Indexing (Uber H3):** Replaced slow polygon intersection queries with **Uber H3 hexagonal indexing** ($O(1)$ cell lookup) for instant driver-to-job proximity matching.
-- **Dynamic Routing & GC Tuning:** Configured OSRM with **Multi-Level Dijkstra (MLD)** for dynamic toll-road weighting; reused memory buffers to minimize Go GC pressure under high dispatch throughput.
+- **Proximity Indexing (Uber H3):** Replaced spatial table scans with **Uber H3 hexagonal indexing** for sub-second driver-to-job proximity lookups.
+- **Dynamic Routing & Memory Pooling:** Configured OSRM with **Multi-Level Dijkstra (MLD)** for dynamic toll-road weighting; implemented buffer pooling (`sync.Pool`) to minimize heap allocations under high dispatch throughput.
 - **Stack:** `Go` · `TypeScript` · `Leaflet` · `Python (Scrapy)` · `Typesense` · `OSRM` · `Uber H3` · `PostgreSQL/PostGIS` · `gRPC (Protobuf)` · `Redis` · `NATS` · `Kubernetes`
 
 ---
@@ -78,11 +78,11 @@ Real-time dispatching and routing platform managing on-demand vehicle towing and
 **Role:** Full-Stack Software Engineer &nbsp;|&nbsp; [Live Website](https://www.radarharga.shop) &nbsp;|&nbsp; [GitHub](https://github.com/andimuchlas/marketplace-intelegence)  
 Independent e-commerce price intelligence and merchant utility platform for Shopee, Tokopedia, TikTok Shop, and Lazada. Adopts a Dual-Portal architecture serving bargain-seeking consumers (B2C Price Radar) and MSME merchants requiring precision net margin simulations (B2B Merchant Hub).
 
-- **Client-Side Zero-Latency Math Engine (< 5ms):** Engineered in-browser marketplace fee computation using Whole-IDR integer arithmetic with stepped rounding, eliminating native JavaScript IEEE 754 floating-point inaccuracies on merchant payout balances.
-- **Dual-Portal & Persona Decoupling:** Decoupled application navigation into two independent domains—a consumer bargain radar and a seller profit calculator—powered by adaptive navigation components (compact mobile dropdown and active-line desktop tabs).
+- **In-Browser Margin & Fee Calculator:** Engineered in-browser marketplace fee computation using integer arithmetic and stepwise rounding, preventing JavaScript floating-point rounding errors in seller disbursement calculations.
+- **B2C & B2B Dual-Interface Design:** Designed responsive dual-interface navigation separating the B2C price-comparison radar from the B2B merchant margin calculator with adaptive layouts (mobile dropdown vs. desktop tabs).
 - **Resilient Click Attribution Pipeline:** Built an analytics redirect tracking route (`/api/radar/click`) equipped with bot/scraper detection regex and `X-Robots-Tag: noindex` headers, protecting the Neon Serverless PostgreSQL database from crawler pollution.
 - **SEO-First Engineering & Google Indexing:** Implemented 15 structured search routes with injected JSON-LD schemas (`Product`, `FAQPage`, `BreadcrumbList`), achieving a **94%+** SEO audit score on Seobility and rapid Google Search Console indexation.
-- **Automated Testing & Code Reliability:** Maintained strict reliability with automated testing via **Vitest** (28/28 unit tests passing), isolating financial math engines, IDR formatting, and sliding-window rate limiters with zero React DOM dependency.
+- **Automated Testing & Code Reliability:** Maintained strict reliability with automated testing via **Vitest** (28/28 unit tests passing), isolating financial calculation logic, IDR formatting, and sliding-window rate limiters with zero React DOM dependency.
 
 <details>
   <summary><b>View System Architecture Diagram</b></summary>
@@ -93,8 +93,8 @@ Independent e-commerce price intelligence and merchant utility platform for Shop
 │                           CLIENT TIER (Browser)                             │
 │  ┌────────────────────────────────┐    ┌─────────────────────────────────┐  │
 │  │ Consumer Price Radar (Route: /)│    │ Merchant Portal (Route: /seller)│  │
-│  │ • Live Multi-Marketplace Grid  │    │ • Zero-Latency In-Browser Calc  │  │
-│  │ • Deal & Discount Highlighter  │    │ • Whole IDR Margin Engine (<5ms)│  │
+│  │ • Live Multi-Marketplace Grid  │    │ • In-Browser Margin Calculator  │  │
+│  │ • Deal & Discount Highlighter  │    │ • Stepwise Rounding & Fee Engine│  │
 │  │ • Outbound Click Beacon        │    │ • Fee Anatomy & BEP Barometer   │  │
 │  └────────────────┬───────────────┘    └────────────────┬────────────────┘  │
 └───────────────────┼─────────────────────────────────────┼───────────────────┘
@@ -175,8 +175,8 @@ Fast booking engine with dynamic pricing calculations and real-time OTA calendar
 **Role:** ML Systems & Backend Engineer &nbsp;|&nbsp; `Private Research` &nbsp;|&nbsp; [GitHub](https://github.com/andimuchlas/LLM-Intent-Router)  
 Orchestration layer intercepting user queries and dynamically routing them across model tiers based on semantic complexity.
 
-- **Taxonomy & Optimization:** Fine-tuned a multilingual DistilBERT model across 5 orthogonal dimensions (Task, Sub-task, Tool, Difficulty, Execution Mode).
-- **Cost vs. Latency Balancing:** Implemented dynamic state-machine fallbacks and weighted soft-scoring to route routine tasks to cheap models and reserve frontier LLMs for high-complexity queries.
+- **Taxonomy & Intent Tuning:** Fine-tuned a multilingual DistilBERT model across 5 classification targets (Task, Sub-task, Tool, Difficulty, Execution Mode).
+- **Cost vs. Latency Balancing:** Implemented dynamic fallback rules and confidence thresholds to route routine tasks to lightweight models, reserving frontier LLMs for complex queries.
 - **Stack:** `Python` · `PyTorch` · `DistilBERT` · `Transformers` · `FastAPI` · `Plotly.js`
 
 ---
