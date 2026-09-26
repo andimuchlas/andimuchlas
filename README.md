@@ -1,16 +1,20 @@
 # Andi Muchlas
 
-Backend Engineer specializing in **Spatial Computing**, **High-Throughput APIs**, and **Distributed Systems**.  
-Designing routing engines, geospatial ETL pipelines, and low-latency microservices.
+Full-Stack Software Engineer (Backend-Heavy) specializing in **High-Throughput APIs**, **Spatial Computing**, and **Modern Distributed Web Architectures**.  
+Designing low-latency microservices, routing engines, geospatial ETL pipelines, and high-performance web applications.
 
 ---
 
 ## Tech Stack & Expertise
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=go,ts,nodejs,bun,py,unity,cs,postgres,redis,docker,kubernetes,aws,githubactions,linux,bash&theme=dark" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=go,ts,react,nextjs,tailwind,nodejs,bun,py,postgres,redis,docker,kubernetes,aws,unity,cs,githubactions,linux,bash&theme=dark" alt="Tech Stack" />
 </p>
 <p align="left">
+  <img src="https://img.shields.io/badge/Next.js_14-000000?style=flat-square&logo=nextdotjs&logoColor=white" height="22" alt="Next.js" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black" height="22" alt="React" />
+  &nbsp;
   <img src="https://img.shields.io/badge/Hono.js-E36002?style=flat-square&logo=hono&logoColor=white" height="22" alt="Hono" />
   &nbsp;
   <img src="https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=flat-square&logo=drizzle&logoColor=black" height="22" alt="Drizzle ORM" />
@@ -30,7 +34,7 @@ Designing routing engines, geospatial ETL pipelines, and low-latency microservic
 
 ## Featured Engineering Work
 
-> *Core systems below are private production code. Summaries highlight system architecture, engineering decisions, and technical impact.*
+> *Featured production systems, open-source platforms, and architectural research. Summaries highlight system architecture, engineering decisions, and technical impact.*
 
 ### 1. RAJADEREK — Real-Time Spatial Routing & Logistics
 **Role:** Backend & Spatial Engineer &nbsp;|&nbsp; `Private / Production System`  
@@ -52,13 +56,56 @@ Real-time AI avatar application combining a Unity client with a containerized vo
 - **Real-Time Communication:** Connected Unity to backend AI services through WebSocket-based real-time communication.
 - **Stack:** `Unity` · `C#` · `WebSocket` · `Docker` · `STT` · `LLM` · `TTS` · `Oculus LipSync` · `MetaPerson`
 
-### 3. Genset Management — Clean Architecture & Distributed Pipeline
-**Role:** Backend Engineer &nbsp;|&nbsp; `Private / Production System`  
-Equipment rental and field maintenance logistics platform across field crews and administration.
+### 3. Radar Harga (radarharga.shop) — Full-Stack Price Intelligence & Merchant Platform
+**Role:** Full-Stack Software Engineer &nbsp;|&nbsp; [Live Website](https://www.radarharga.shop) &nbsp;|&nbsp; [GitHub](https://github.com/andimuchlas/marketplace-intelegence)  
+Independent e-commerce price intelligence and merchant utility platform for Shopee, Tokopedia, TikTok Shop, and Lazada. Adopts a Dual-Portal architecture serving bargain-seeking consumers (B2C Price Radar) and MSME merchants requiring precision net margin simulations (B2B Merchant Hub).
 
-- **Hexagonal Architecture (NX Monorepo):** Isolated domain rules with Dependency Injection (`tsyringe`) and shared type-safe Zod contracts across client and server.
-- **Asynchronous Job Pipeline:** Decoupled PDF BAST generation (digital e-signatures), FCM push alerts, and XLSX financial exports using **BullMQ & Redis**.
-- **Stack:** `Node.js` · `TypeScript` · `Hono.js` · `Drizzle ORM` · `PostgreSQL` · `Redis` · `BullMQ` · `AWS S3` · `NX`
+- **Client-Side Zero-Latency Math Engine (< 5ms):** Engineered in-browser marketplace fee computation using Whole-IDR integer arithmetic with stepped rounding, eliminating native JavaScript IEEE 754 floating-point inaccuracies on merchant payout balances.
+- **Dual-Portal & Persona Decoupling:** Decoupled application navigation into two independent domains—a consumer bargain radar and a seller profit calculator—powered by adaptive navigation components (compact mobile dropdown and active-line desktop tabs).
+- **Resilient Click Attribution Pipeline:** Built an analytics redirect tracking route (`/api/radar/click`) equipped with bot/scraper detection regex and `X-Robots-Tag: noindex` headers, protecting the Neon Serverless PostgreSQL database from millions of crawler requests.
+- **SEO-First Engineering & Google Indexing:** Implemented 15 structured search routes with injected JSON-LD schemas (`Product`, `FAQPage`, `BreadcrumbList`), multi-resolution favicons, and crawler fallbacks, achieving a **94%+** SEO audit score on Seobility and rapid Google Search Console indexation.
+- **Automated Testing & Code Reliability:** Maintained strict reliability with automated testing via **Vitest** (28/28 unit tests passing), isolating financial math engines, IDR formatting, and sliding-window rate limiters with zero React DOM dependency.
+
+<details>
+  <summary><b>View System Architecture Diagram</b></summary>
+  <br/>
+
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           CLIENT TIER (Browser)                             │
+│  ┌────────────────────────────────┐    ┌─────────────────────────────────┐  │
+│  │ Consumer Price Radar (Route: /)│    │ Merchant Portal (Route: /seller)│  │
+│  │ • Live Multi-Marketplace Grid  │    │ • Zero-Latency In-Browser Calc  │  │
+│  │ • Deal & Discount Highlighter  │    │ • Whole IDR Margin Engine (<5ms)│  │
+│  │ • Outbound Click Beacon        │    │ • Fee Anatomy & BEP Barometer   │  │
+│  └────────────────┬───────────────┘    └────────────────┬────────────────┘  │
+└───────────────────┼─────────────────────────────────────┼───────────────────┘
+                    │ (Fetch Search / Beacon)             │ (Pre-rendered SSG)
+                    ▼                                     ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     EDGE & SERVERLESS TIER (Next.js 14)                     │
+│  ┌───────────────────────────────┐     ┌─────────────────────────────────┐  │
+│  │ App Router Server Components  │     │ Edge API Engine                 │  │
+│  │ • Streaming SSR & Static Gen  │     │ • Sliding-Window Rate Limiter   │  │
+│  │ • 15 Pre-rendered Intent URLs │     │ • Bot / Scraper Detection Filter│  │
+│  │ • JSON-LD Rich Schemas Inject │     │ • Secure 302 Attribution Direct │  │
+│  └───────────────┬───────────────┘     └────────────────┬────────────────┘  │
+└──────────────────┼──────────────────────────────────────┼───────────────────┘
+                   │                                      │
+                   ▼                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           DATA & PERSISTENCE TIER                           │
+│  ┌───────────────────────────────────────────────────────────────────────┐  │
+│  │ Drizzle ORM + PostgreSQL (Neon Serverless DB)                         │  │
+│  │ • affiliate_clicks (Bot-filtered attribution log)                     │  │
+│  │ • dynamic_promotions (Curated active campaign feeds)                  │  │
+│  └───────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+</details>
+
+- **Stack:** `Next.js 14 (App Router)` · `React` · `TypeScript` · `Tailwind CSS` · `Framer Motion` · `Neon PostgreSQL` · `Drizzle ORM` · `Vitest` · `Vercel`
 
 ### 4. Casanela Villa — High-Throughput Reservation Engine
 **Role:** Backend Engineer &nbsp;|&nbsp; `Private / Production System`  
