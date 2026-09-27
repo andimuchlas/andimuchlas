@@ -30,6 +30,8 @@ Experienced across modern frontend (TypeScript, React, Next.js, Three.js, Leafle
   <img src="https://img.shields.io/badge/NATS-27AAE1?style=flat-square&logo=natsdotio&logoColor=white" height="22" alt="NATS" />
   &nbsp;
   <img src="https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white" height="22" alt="Vitest" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" height="22" alt="n8n" />
 </p>
 
 | Category | Skills & Technologies |
@@ -41,6 +43,7 @@ Experienced across modern frontend (TypeScript, React, Next.js, Three.js, Leafle
 | **Real-Time & Interactive** | Unity (C#), LiDAR Sensor Telemetry, WebSocket Streaming, Oculus LipSync |
 | **Cloud & DevOps** | Docker, Kubernetes, AWS (S3, IAM), Vercel, CI/CD, Linux |
 | **Testing & Methods** | Vitest, Automated Unit Testing, TDD, SEO (JSON-LD), REST & gRPC API Design |
+| **AI & Automation** | LLM Orchestration, Agentic Tool-Calling, n8n Workflow Automation, Webhook Integrations, DistilBERT |
 | **Spoken Languages** | Indonesian (Native), English (Professional Working Proficiency) |
 
 ---
@@ -218,6 +221,6 @@ Orchestration layer intercepting user queries and dynamically routing them acros
 <p align="left">
   <a href="https://andi.is-a.dev"><img src="https://img.shields.io/badge/Website-andi.is--a.dev-111111?style=for-the-badge&logo=About.me&logoColor=white" alt="Website" /></a>
   <a href="https://landing-page-porfolio-one.vercel.app/"><img src="https://img.shields.io/badge/Creative_3D_Portfolio-landing--page-6851FF?style=for-the-badge&logo=vercel&logoColor=white" alt="Creative Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/andimuchlas"><img src="https://img.shields.io/badge/LinkedIn-andimuchlas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/andimuchlas/"><img src="https://img.shields.io/badge/LinkedIn-andimuchlas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:andimuchlas156@gmail.com"><img src="https://img.shields.io/badge/Email-andimuchlas156%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
