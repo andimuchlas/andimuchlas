@@ -80,7 +80,7 @@ Independent e-commerce price intelligence and merchant utility platform for Shop
 
 - **In-Browser Margin & Fee Calculator:** Engineered in-browser marketplace fee computation using integer arithmetic and stepwise rounding, preventing JavaScript floating-point rounding errors in seller disbursement calculations.
 - **B2C & B2B Dual-Interface Design:** Designed responsive dual-interface navigation separating the B2C price-comparison radar from the B2B merchant margin calculator with adaptive layouts (mobile dropdown vs. desktop tabs).
-- **Resilient Click Attribution Pipeline:** Built an analytics redirect tracking route (`/api/radar/click`) equipped with bot/scraper detection regex and `X-Robots-Tag: noindex` headers, protecting the Neon Serverless PostgreSQL database from crawler pollution.
+- **Affiliate Redirect & Bot Protection:** Built an analytics redirect tracking route (`/api/radar/click`) equipped with bot/scraper detection regex and `X-Robots-Tag: noindex` headers, protecting the Neon Serverless PostgreSQL database from crawler traffic pollution.
 - **SEO-First Engineering & Google Indexing:** Implemented 15 structured search routes with injected JSON-LD schemas (`Product`, `FAQPage`, `BreadcrumbList`), achieving a **94%+** SEO audit score on Seobility and rapid Google Search Console indexation.
 - **Automated Testing & Code Reliability:** Maintained strict reliability with automated testing via **Vitest** (28/28 unit tests passing), isolating financial calculation logic, IDR formatting, and sliding-window rate limiters with zero React DOM dependency.
 
@@ -139,7 +139,7 @@ A cinematic, interactive 3D web experience showcasing creative web design, 3D sp
 ---
 
 ### 4. AI Avatar Unity — End-to-End AI & Real-Time Interactive System
-**Role:** Systems Architect & Full-Stack Engineer &nbsp;|&nbsp; `Open Source / GitHub` &nbsp;|&nbsp; [GitHub](https://github.com/andimuchlas/AI-Avatar-Unity)  
+**Role:** Full-Stack & Systems Engineer &nbsp;|&nbsp; `Open Source / GitHub` &nbsp;|&nbsp; [GitHub](https://github.com/andimuchlas/AI-Avatar-Unity)  
 Real-time conversational AI avatar application combining a Unity client with a containerized voice-processing backend.
 
 - **Full-Stack Streaming Architecture:** Connected a Unity (C#) client to containerized Docker backend services via bidirectional WebSockets for low-latency state and audio streaming.
@@ -164,7 +164,7 @@ Immersive room installation where a web-based interface connects with a Unity-po
 **Role:** Full-Stack / Backend Engineer &nbsp;|&nbsp; `Private / Production System`  
 Fast booking engine with dynamic pricing calculations and real-time OTA calendar synchronization.
 
-- **Lightweight Runtime:** Built on **Bun + Hono.js** for sub-millisecond route handling and high concurrent request capacity.
+- **Lightweight Runtime:** Built on **Bun + Hono.js** for minimal routing overhead and high concurrent request capacity.
 - **OTA Channel Sync:** Automated two-way channel synchronization (HotelMu) and booking timeout management via BullMQ background queues.
 - **Direct S3 Uploads:** Integrated AWS S3 Presigned URL workflows for direct media storage, bypassing backend proxy bottlenecks.
 - **Stack:** `Bun` · `TypeScript` · `Hono.js` · `PostgreSQL` · `Drizzle ORM` · `Redis` · `BullMQ` · `AWS S3`
