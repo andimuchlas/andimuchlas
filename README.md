@@ -25,7 +25,7 @@ End-to-end delivery across modern web (TypeScript, React, Next.js, Three.js, Lea
 
 - **PT Luwes Inovasi Mandiri** — `Full-Stack Engineer (Web & Mobile)` · *Oct 2026 – Present · Full-time*  
   Building two location-based products end-to-end across web, backend, and Flutter mobile: a plantation management platform and a flood early-warning system. Driving new modules, UI/UX overhauls, bug fixes, and performance optimization.
-- **Molca Teknologi Nusantara** — `Interactive Software Engineer` · *Jun 2026 – Present · Remote Contract*  
+- **Molca Teknologi Nusantara** — `Interactive Software Engineer` · *Jun 2026 – Sep 2026 · Remote Contract*  
   Developed interactive simulation systems and modular gameplay features in C# (Unity) with decoupled component architecture, optimizing runtime memory and frame rendering loops.
 - **PT Lintas Cakra Cipta** — `Software Engineer (Backend & Web Systems)` · *Sep 2025 – Oct 2026 · Full-time*  
   Engineered Go/TypeScript backend services, optimized PostGIS spatial queries sustaining sub-second SLAs, and integrated interactive Leaflet mapping apps.
