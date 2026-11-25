@@ -51,7 +51,7 @@ End-to-end delivery across modern web (TypeScript, React, Next.js, Three.js, Lea
 - Delivered web and API modules including weather catalog, CSV export, station pinpointing, email broadcasts, and PWA support.
 
 ### 3. RAJADEREK — Real-Time Spatial Routing & Dispatch Logistics
-**Role:** Backend & Spatial Systems Engineer · `Private / Production`
+**Role:** Backend & Spatial Systems Engineer · `Private Ops` · [Website](https://www.rajaderek.com/)
 - Real-time vehicle towing dispatch platform with interactive Leaflet operator maps and spatial search across ~2.8M POIs and ~70K boundaries.
 - Decoupled TypeScript gateway and Go core engine via gRPC; slashed search latency to <200ms (p95) with Typesense + PostGIS fallback.
 - Replaced table scans with Uber H3 proximity indexing and OSRM dynamic toll-road routing.
@@ -65,7 +65,7 @@ End-to-end delivery across modern web (TypeScript, React, Next.js, Three.js, Lea
 - **Creative 3D Interactive Portfolio** ([Live](https://landing-page-porfolio-one.vercel.app/)) — Scroll-choreographed WebGL/Three.js experience built with Next.js 16, R3F, GSAP, and Lenis.
 - **AI Avatar Unity** ([GitHub](https://github.com/andimuchlas/AI-Avatar-Unity)) — Real-time conversational 3D avatar linking Unity (C#) to a Dockerized STT → LLM → TTS WebSocket pipeline with Oculus LipSync.
 - **Gephyrion** (`Interactive Installation`) — PHP/MySQL web portal synced via WebSockets to multi-projector Unity displays at sub-100ms latency and 60 FPS.
-- **Casanela Villa** (`Private / Production`) — High-concurrency Bun + Hono.js reservation engine with two-way OTA sync (BullMQ) and direct S3 uploads.
+- **Casanela Villa** ([Live](https://casanelavilla.com/)) — High-concurrency Bun + Hono.js reservation engine with two-way OTA sync (BullMQ) and direct S3 uploads.
 - **Intelligent LLM Intent Router** ([GitHub](https://github.com/andimuchlas/LLM-Intent-Router)) — Multilingual DistilBERT classifier routing queries across model tiers by complexity and cost.
 
 ---
